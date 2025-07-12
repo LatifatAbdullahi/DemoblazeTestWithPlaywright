@@ -2,7 +2,7 @@
 import { Browser, chromium, Page, expect } from '@playwright/test';
 
 async  function globalSetup() {
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   const context = await browser.newContext();
   await page.goto('https://www.demoblaze.com/')
